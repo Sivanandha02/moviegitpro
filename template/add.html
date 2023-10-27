@@ -1,11 +1,43 @@
 {% extends 'base.html' %}
 {% block body %}
-<form method="post" enctype="multipart/form-data">
-  {% csrf_token %}
-  <input type="text" name="name" placeholder="enter movie name">
-  <input type="text" name="desc" placeholder="enter movie description">
-  <input type="text" name="year" placeholder="enter movie year">
-  <input type="file" name="img" >
-  <input type="submit">
-</form>
+<div class="center justify-content align-items" style="text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 50px;
+    margin-left: 500px;
+    text-align: center;
+    width: 300px;">
+  <form method="post" enctype="multipart/form-data" style="display: flex;
+    flex-direction: column;
+    align-items: center;">
+    {% csrf_token %}
+    <br><input type="text" name="name" placeholder="enter movie name" style=" width: 100%;
+    padding: 10px;
+    margin: 1px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;"><br><br>
+    <input type="text" name="desc" placeholder="enter movie description" style=" width: 100%;
+    padding: 10px;
+    margin: 1px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;"><br><br>
+    <input type="text" name="year" placeholder="enter movie year" style=" width: 100%;
+    padding: 10px;
+    margin: 1px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;"><br>
+    <input type="file" name="img" style="margin-left: 40px;" ><br>
+    <button type="submit" style=" width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;">Submit</button>
+
+  </form>
+</div>
 {% endblock %}
